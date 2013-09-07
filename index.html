@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024">
+
+  <title>FetchIt -- Effective data retrieval and communication.</title>
+  <meta name="description" content="">
+
+  <!-- Pure -->
+  <link rel="stylesheet" href="css/pure-0.2.1.min.css">
+  
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  
+  <script src="js/jquery-1.10.2.min.js"></script>
+
+            <!-- Google Analytics
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42658075-1', 'go-fetchit.com');
+    ga('send', 'pageview');
+  </script> -->
+</head>
+
+<body>
+  <header>
+    <div class="top-bar">
+      <div>
+        <img src="img/logo_dog_invert.svg" alt="GoFetchIt" />
+        <span>go fetch it</span>
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <ul>
+                <li><a href="#">LEARN MORE</a></li>
+                <li><a href="#area4">WHY FETCHIT?</a></li>
+                <li><a href="#area5">EXAMPLES</a></li>
+                <li><a href="#area6">COMPARISON</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="viewport" id="area1">
+    <div class="content-area-2">
+      <div class="claim">
+        <div class="line"><span id="claim-1">Do you really spend your time</span></div>
+        <div class="line"><span id="claim-2a"> analyzing</span><span id="claim-2b"> data</span></div>
+        <div class="line">
+          <span id="claim-3a">&mdash; or rather </span>
+          <span id="claim-3bc"><span id="claim-3b">chasing</span><span id="claim-3c"> it?</span></span>
+        </div>
+      </div>
+      <div class="arrows">
+        <a class="arrow-left" href="#">
+          <i class="icon-chevron-left icon-light"></i>
+        </a>
+        <a class="arrow-right" href="#">
+          <i class="icon-chevron-right icon-light"></i>
+        </a>
+      </div>
+      <div class="circles">
+        <a class="circle-1" href="#">
+          <i class="icon-circle icon-dark"></i>
+        </a>
+        <a class="circle-2" href="#">
+          <i class="icon-circle icon-light"></i>
+        </a>
+        <a class="circle-3" href="#">
+          <i class="icon-circle icon-light"></i>
+        </a>
+      </div>
+      <div class="sign-up-form">
+        <form action="#">
+          <img src="img/banner.png" width="276" height="52" alt="banner" />
+          <h2>MORE INFORMATION</h2>
+          <input type="text" placeholder="First / Last Name"/>
+          <input type="text" placeholder="Email address"/>
+          <input type="text" placeholder="Phone number"/>
+          <button class="pure-button">Tell me more!</button>
+          <div id="sign-in">or <a href="#">sign in</a></div>
+        </form>
+      </div>
+    </div>
+    
+
+    <div class="content-area-3">
+      <div>
+        <img src="img/logo_dog_blue.svg" width="200" height="136" alt="GoFetchIt" />
+        <div class="logo-text">go fetch it</div>
+        <h1>Effective data retrieval and communication.</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="viewport"  id="area4">
+    <!-- <img src="img/logo_dog_bw.svg" class="background-logo" width="300" height="auto" alt="GoFetchIt" /> -->
+    <div class="content-area-4">
+      <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div class="icon">
+            <span class="icon-stack icon-4x">
+              <i class="icon-circle icon-stack-base icon-light"></i>
+              <i class="icon-wrench icon-dark"></i>
+            </span>
+          </div>
+          <div class="claim">
+            <h2>Flexible like spreadsheets.</h2>
+          </div>
+          <div class="quote">
+            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+              Strategic decisions rely on quick data collection. I don't have time to wait for IT to build a new report.
+            </p>
+          </div>
+          <div class="explanation">
+            <p>In FetchIt, you define the data you need with a few mouse clicks. No installation needed for any user, just go!</p>
+          </div>
+       </div>
+        <div class="pure-u-1-3 middle-column">
+          <div class="icon">
+            <span class="icon-stack icon-4x">
+              <i class="icon-circle icon-stack-base icon-light"></i>
+              <i class="icon-comments icon-dark"></i>
+            </span>
+          </div>
+          <div class="claim">
+            <h2>Communicative as email.</h2>
+          </div>
+          <div class="quote">
+            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+              I spend half of my time running after people before starting to analyze it. Communication is poor.
+            </p>
+          </div>
+          <div class="explanation">
+            <p>FetchIt sends out requests and reminders, and makes sure the recipient understands. You know at any time what's going on.</p>
+          </div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="icon">
+            <span class="icon-stack icon-4x">
+              <i class="icon-circle icon-stack-base icon-light"></i>
+              <i class="icon-lock icon-dark"></i>
+            </span>
+          </div>
+          <div class="claim">
+            <h2>Secure as ERP.</h2>
+          </div>
+          <div class="quote">
+            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+              Data for critical business decisions is stored in spreadsheets/ email. I'm afraid of a data audit or leak, but without some shortcuts we wouldn't get things done.
+            </p>
+          </div>
+          <div class="explanation">
+            <p>FetchIt encrypts data before storing it either in a secure cloud, or in your company's established infrastructure.</p>
+          </div>
+        </div>
+        <button class="pure-button tell-me-more-button">Tell me more!</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="viewport" id="area5">
+    <div class="content-area-5">
+      <div>
+        <h1>Examples</h1>
+        <div class="examples">
+          <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <ul>
+                <li id="status" class="pure-menu-selected"><a id="status">Status tracking</a></li>
+                <li id="kpi"><a>KPI dashboard</a></li>
+                <li id="nda"><a id="nda">NDA compliance</a></li>
+            </ul>
+          </div>
+          <script>
+            $('.examples li').click(function() {
+              $(this).siblings().removeClass('pure-menu-selected');
+              $(this).addClass('pure-menu-selected');
+              $('div.content').css('display','none');
+              $('.content i').css('display','none');
+              $('div#content-' + $(this).prop('id')).css('display','block');;
+              $('#content-' + $(this).prop('id') + ' i').css('display','inline');;
+            });
+          </script>
+          <div class="content" id="content-status">
+            <p>Status tracking should be easy. In reality, it takes a lot of time to
+              receive an up-to-date qualitative and quantitative assessment of a
+              project portfolio with many projects and multiple project
+              owners.</p>
+            <table class="pure-table">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                  <th>...</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Project A</td>
+                  <td>Red</td>
+                  <td>Supplier fell out</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Project B</td>
+                  <td>Yellow</td>
+                  <td>Changed process</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Project C</td>
+                  <td>Green</td>
+                  <td></td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              <tbody>
+            </table>
+         
+            <p>Use FetchIt to free up time for actual analysis of the data instead of running after people to get it.</p>
+              <ul>
+                <li><i class="icon-arrow-right"></i> You identify the data sources, and FetchIt addresses and reminds them
+                  via email.</li>
+                <li><i class="icon-arrow-right"></i> The data providers have easy access to FetchIt without installation.</li>
+                <li><i class="icon-arrow-right"></i> They can commit to your data request, or send back questions for clarification.</li>
+                <li><i class="icon-arrow-right"></i> You have an accurate overview of the progress at any time in FetchIt.</li>
+                <li><i class="icon-arrow-right"></i> FetchIt allows you to reject reports that don't meet your quality criteria
+                  with a single click.</li>
+              </ul>
+              <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+          </div>
+          
+          <div class="content" id="content-kpi">
+            <p>There isn't a modern company that's not steered by KPIs. Identifying and addressing
+              all the right sources for a comprehensive management dashboard with a large number of KPIs
+              is an error-prone process.</p>
+            <img src="img/kpi.png" class="example" alt="KPI dashboard" /> 
+            <p>Ensure a high-quality deliverable by a consistent end-to-end data gathering process with FetchIt.</p>
+            <ul>
+              <li><i class="icon-arrow-right"></i> In FetchIt, you define the dashboard structure and data providers once.</li>
+              <li><i class="icon-arrow-right"></i> FetchIt addresses and reminds them
+                via email, they can commit to your data request, or send back questions for clarification.</li>
+              <li><i class="icon-arrow-right"></i> The data providers can drag &amp; drop data from Excel, other legacy systems,
+                or enter manually.</li>
+              <li><i class="icon-arrow-right"></i> You have an accurate overview of the progress at any time in FetchIt and
+                can send reminders easilty.</li>
+              <li><i class="icon-arrow-right"></i> FetchIt allows you to export the collected data at any time for data analysis.</li>
+            </ul>
+            <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+          </div>
+
+          <div class="content" id="content-nda">
+            <p>Special projects require special attention &mdash; and often a separate NDA.
+              You need to make sure that you know who signed it and when. You don't have time
+              for a solution that requires IT administration for every new user.</p>
+            <img src="img/nda.png" class="example" alt="NDA tracking" /> 
+            <p>Ensure compliance and traceability of the NDA process using FetchIt.</p>
+            <ul>
+              <li><i class="icon-arrow-right"></i> In FetchIt, you insert the NDA.</li>
+              <li><i class="icon-arrow-right"></i> You identify the people who you want to sign the NDA, and FetchIt notifies them
+                via email.</li>
+              <li><i class="icon-arrow-right"></i> The recipients have easy access to FetchIt without installation.</li>
+              <li><i class="icon-arrow-right"></i> You see at any time who signed the NDA and when.</li>
+              <li><i class="icon-arrow-right"></i> FetchIt allows you to create a compliance report easily with a single click.</li>
+            </ul>
+            <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="viewport" id="area6">
+    <!-- <img src="img/logo_dog_bw.svg" class="background-logo" width="300" height="auto" alt="GoFetchIt" /> -->
+    <div class="content-area-6">
+      <div>
+        <h1>Comparison</h1>     
+        <table class="pure-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Description</th>
+              <th class="others">Spreadsheet&nbsp;/<br>email</th>
+              <th class="others">ERP software</th>
+              <th class="others">PMO tools</th>
+              <th class="fetchit">FetchIt</th>
+              <th class="current">My current solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Easy and flexible to use</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others">-</td>
+              <td class="others">-</td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Easy user administration</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others">-</td>
+              <td class="others">-</td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Audit trail</td>
+              <td class="others">-</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Reminders and communication</td>
+              <td class="others">-</td>
+              <td class="others">-</td>
+              <td class="others">-</td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Excel integration</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others">-</td>
+              <td class="others">-</td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Multi-dimensional data</td>
+              <td class="others">-</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others">-</td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Encryption and data security</td>
+              <td class="others">-</td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="others"><i class="icon-check icon-large icon-light"></i></td>
+              <td class="fetchit"><i class="icon-check icon-large icon-dark"></i>
+                <div><button class="pure-button tell-me-more-button button-table">Tell me more!</button></div>
+              </td>
+              <td class="current"><input type="checkbox" /></td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+    </div>
+  </section>
+  
+  <section class="area-footer">
+    <footer>
+      <img src="img/logo_dog_bw.svg" class="background-logo" width="300" height="auto" alt="GoFetchIt" />
+
+      <div class="footer-line"></div>
+      <h1>go fetch it</h1>
+      <p>(c) 2013 gofetchit, Inc.</p>
+    </footer>
+  </section>
+  
+</body>
+</html>

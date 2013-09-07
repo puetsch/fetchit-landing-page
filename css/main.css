@@ -1,0 +1,525 @@
+/* ===== Global definitions ===== */
+
+/* fetchit_blue: #007ca3
+   $fetchit_orange: #f08519
+   007ca3
+   00C2FF
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,500,300,300italic);
+
+html, body {
+  /* zoom: .9; */
+  height: 100%;
+  min-height: 100%;
+  background: #fff;
+  color: #555;
+}
+
+html, body, .pure-button, .pure-menu {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 220%;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 140%;
+  font-weight: 500;
+}
+
+.pure-table th {
+  font-weight: 500;
+}
+
+.pure-table td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.viewport {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+  background: #fff;
+  color: #555;
+}
+
+.pure-g > div {
+  box-sizing: border-box; 
+}
+
+.pure-menu.pure-menu-open {
+  width: auto;
+  background: none;
+  font-size: 100%;
+}
+
+/* ===== Define top bar with navigation and logo ===== */
+
+section {
+  clear: both;
+}
+
+.top-bar {
+  border-radius: 0;
+  border-top: .2em solid #F08519;
+  border-bottom: .1em solid #fff;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  background: #007ca3;
+  z-index: 5;
+}
+
+.top-bar > div {
+  position: relative;
+  height: 100%;
+}
+
+.top-bar  img {
+  height: 2.5em;
+  padding: .5%;
+}
+
+.top-bar span {
+  color: #eee;
+  font-size: 140%;
+  line-height: 5em;
+  position:absolute;
+  top: 50%;
+  margin-top: -2.5em;
+}
+
+.top-bar .pure-menu.pure-menu-open {
+  float: right;
+  width: auto;
+  position:absolute;
+  top:50%;
+  right: 0;
+  height: 5em;
+  margin-top: -1em;
+  background: none;
+  font-size: 100%;
+}
+
+.top-bar .pure-menu li a {
+  color: #eee;
+  background: none;
+  border-bottom: .3em solid #007ca3;
+}
+
+
+.pure-menu li a:hover,.pure-menu li a:focus {
+  background: none;
+  border-bottom: .3em solid #f08519;
+}
+
+/* ===== First screen: claim ===== */
+
+.content-area-2 {
+  margin-top: 2.5em;
+  padding: 1em;
+  height: 40%;
+  min-height: 40%;
+  background: url('../img/background.png') no-repeat left #007ca3;
+}
+
+.content-area-2 .claim {
+  position: relative;
+  top: 55%;
+  margin-top: -10%;
+  display: table;
+}
+
+.content-area-2 .line {
+  margin-left: 5em;
+  margin-top: 0;
+  margin-bottom: -6%;
+  font-weight: 100;
+  position: relative;
+}
+
+.content-area-2 #claim-1 {
+  color: #fff;
+  font-size: 200%;
+}
+
+.content-area-2 #claim-2a{
+  color: #f08519;
+  font-size: 500%;
+  font-weight: 300;
+}
+
+.content-area-2 #claim-2b{
+  color: #fff;
+  font-size: 250%;
+  position: absolute;
+  bottom: 11%;
+  right: 0;
+}
+
+.content-area-2 #claim-3a {
+  color: #fff;
+  font-size: 225%;
+}
+
+.content-area-2 #claim-3b {
+  color: #f08519;
+  font-size: 350%;
+  font-weight: 300;
+}
+
+.content-area-2 #claim-3c {
+  color: #fff;
+  font-size: 225%;
+  position: absolute;
+  bottom: 8%;
+  right: 0;
+}
+
+/* ===== First screen: rotation navigation ===== */
+
+.content-area-2 .arrows {
+  position: relative;
+  top: 50%;
+  margin-top: -5%;
+}
+
+.content-area-2 i {
+  display: inline-block;
+  background-color: #555;
+  position: absolute;
+  border-radius: .5em;
+  text-decoration: none;
+}
+
+.content-area-2 .arrow-left i {
+  left: -2em;
+  padding: 1em 1.2em 1em 2em;
+}
+
+.content-area-2 .arrow-right i {
+  right: -2em;
+  padding: 1em 2em 1em 1.2em;
+}
+
+.content-area-2 a :hover {
+  color: #007ca3;
+}
+
+.content-area-2 .circles {
+  position: relative;
+  left: 50%;
+  top: 98%;
+}
+
+.content-area-2 .circle-1 {
+  position: absolute;
+  left: -1.2em;
+}
+
+.content-area-2 .circle-3 {
+  position: absolute;
+  left: 1.2em;
+}
+
+/* ===== First screen: sign-up-form ===== */
+
+.sign-up-form {
+  position: absolute;
+  right: 7%;
+  top: 5%;
+  width: 300px;
+  padding-top: 4em;
+  border-radius: .2em;
+  border: .1em solid #ddd;
+  background: rgba(255,255,255,0.5);
+  z-index:3;
+}
+
+.sign-up-form h2 {
+  color: #fff;
+  display: inline;
+  position: absolute;
+  top: -.9em;
+  width: 100%;
+  text-align: center;
+}
+
+.sign-up-form input, .sign-up-form button {
+  opacity: 1.0;
+  display: block;
+  width: 255px;
+  height: 1.5em;
+  margin: .7em 1em .7em 1em;
+  border: .1em solid #ddd;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.sign-up-form button {
+  color: #fff;
+  font-weight: 500;
+  width: 268px;
+  background-color: #555;
+  height: 2.5em;
+}
+
+.sign-up-form img {
+  position: absolute;
+  left: 12px;
+  top: -11px;
+}
+
+.sign-up-form #sign-in {
+  float: right;
+  font-size: 80%;
+  margin: -.6em 18px .4em 0;
+}
+
+.tell-me-more-button {
+  display: block;
+  width: 20em;
+  margin: 2em auto 2em auto;
+  border: .1em solid #000;
+  padding: .3em;
+  border-radius: .2em;
+  color: #fff;
+  font-weight: 500;
+  background-color: #f08519;
+  height: 3em;
+}
+
+.button-light {
+  border: none;
+}
+
+/* ===== First screen: logo ===== */
+
+.content-area-3 {
+  height: 55%;
+  min-height: 55%;
+  text-align: center;
+}
+
+.content-area-3 > div {
+  position: relative;
+  top: 50%;
+  margin-top: -10em;
+}
+
+.logo-text {
+  font-size: 200%;
+  color: #007ca3
+}
+
+.content-area-3 h1 {
+  margin-top: 1em;
+}
+
+/* ===== Second screen ===== */
+
+.content-area-4 {
+  height: 100%;
+  min-height: 100%;
+  background: #444;
+  color: #eee;
+  padding: 10%;
+}
+
+.content-area-4 .pure-g {
+  position: relative;
+  top: 50%;
+  margin-top: -33em
+}
+
+.content-area-4 h2 {
+  color: #fff;
+  padding: 0 1em 0 1em;
+}
+
+.content-area-4 p {
+  padding: 0 1em 0 1em;
+}
+
+.content-area-4 .icon {
+  text-align: center;
+}
+
+.content-area-4 .claim{
+  text-align: center;
+  margin-top: 1em;
+  height: 4em;
+}
+
+.content-area-4 .quote {
+  font-style: italic;
+  height: 5em
+}
+
+.content-area-4 .explanation {
+}
+
+.content-area-4 .middle-column {
+  border-left: .1em solid #666;
+  border-right: .1em solid #666;
+}
+
+/* ===== Third screen ===== */
+
+.content-area-5 {
+  height: 100%;
+  min-height: 100%;
+  padding: 0 10% 0 10%;
+}
+
+.content-area-5 > div {
+  position: relative;
+  top: 8%;
+}
+
+.content-area-5 .examples {
+  border-radius: .3em;
+  border: .1em solid #555;
+}
+
+.pure-menu .pure-menu-selected a:focus, .pure-menu .pure-menu-selected a:hover,
+.pure-menu .pure-menu-selected a {
+  border-radius: 0;
+  background: #007ca3;
+  color: #fff;
+  border-bottom: .3em solid #007ca3;
+}
+
+.content-area-5 .content {
+  padding: 0 1em 0 1em;
+  border-top: .1em solid #555;
+  margin-top: .1em;
+  display: none;
+}
+
+.content-area-5 i {
+  display: none;
+}
+
+.content-area-5 .pure-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: .3em;
+}
+
+.content-area-5 #content-status {
+  display: block;
+}
+
+.content-area-5 #content-status i {
+  display: inline;
+}
+
+.content-area-5 .content > img{
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Fourth screen ===== */
+
+.content-area-6 {
+  height: 100%;
+  min-height: 100%;
+  padding: 0 10% 0 10%;
+  background: #444;
+  color: #eee;
+}
+
+.content-area-6 > div {
+  position: relative;
+  top: 8%;
+}
+
+table .others, table .fetchit, table .current {
+  text-align: center;
+}
+
+th.fetchit  {
+  background: #f08519;
+  border: solid #f08519;
+  border-width: 2em 2em .5em 2em;
+}
+
+td.fetchit  {
+  background: #fff;
+  border: solid #fff;
+  border-width: 0 2em 2em 2em;
+  color: #555;
+}
+
+.fetchit > div {
+  position: relative;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.button-table {
+  width: 160px;
+  position: absolute;
+  top: 15px;
+}
+
+.background-logo {
+  position: absolute;
+  left: -150px;
+  bottom: 50px;
+}
+
+/* ===== Define footer area ===== */
+
+.area-footer {
+  position: relative;
+  background: #fff;
+  color: #555;
+  background: #222;
+  padding: 2% 0;
+}
+
+.footer-bar {
+  height: 2em;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+}
+
+.background-logo {
+  position: absolute;
+  left: -150px;
+  bottom: 1em;
+}
+
+.footer-line {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-bottom: .2em solid #F08519;
+}
+
+footer p, footer h1 {
+  margin: 0 0 0 15%;
+}
+
+/* ===== Old definitions ===== */
+
+
