@@ -2,8 +2,6 @@
 
 /* fetchit_blue: #007ca3
    $fetchit_orange: #f08519
-   007ca3
-   00C2FF
 */
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,500,300,300italic);
@@ -123,71 +121,37 @@ section {
 
 .content-area-2 {
   margin-top: 2.5em;
-  padding: 1em;
   height: 40%;
   min-height: 40%;
   background: url('../img/background.png') no-repeat left #007ca3;
 }
 
 .content-area-2 .claim {
-  position: relative;
-  top: 55%;
-  margin-top: -10%;
+  position: absolute;
+  top: 20%;
+  margin-top: -5%;
+  margin-left: 8%;
+  color: #fff;
   display: table;
+  display: none;
 }
 
-.content-area-2 .line {
-  margin-left: 5em;
-  margin-top: 0;
-  margin-bottom: -6%;
-  font-weight: 100;
-  position: relative;
+.content-area-2 .claim img {
+  width: 70%;
 }
 
-.content-area-2 #claim-1 {
-  color: #fff;
-  font-size: 200%;
+.claim#claim-1 {
+  display: block;
 }
 
-.content-area-2 #claim-2a{
-  color: #f08519;
-  font-size: 500%;
-  font-weight: 300;
-}
-
-.content-area-2 #claim-2b{
-  color: #fff;
-  font-size: 250%;
-  position: absolute;
-  bottom: 11%;
-  right: 0;
-}
-
-.content-area-2 #claim-3a {
-  color: #fff;
-  font-size: 225%;
-}
-
-.content-area-2 #claim-3b {
-  color: #f08519;
-  font-size: 350%;
-  font-weight: 300;
-}
-
-.content-area-2 #claim-3c {
-  color: #fff;
-  font-size: 225%;
-  position: absolute;
-  bottom: 8%;
-  right: 0;
-}
 
 /* ===== First screen: rotation navigation ===== */
 
 .content-area-2 .arrows {
-  position: relative;
-  top: 50%;
-  margin-top: -5%;
+  position: absolute;
+  top: 20%;
+  margin-top: -2em;
+  width: 100%;
 }
 
 .content-area-2 i {
@@ -199,12 +163,12 @@ section {
 }
 
 .content-area-2 .arrow-left i {
-  left: -2em;
+  left: -1em;
   padding: 1em 1.2em 1em 2em;
 }
 
 .content-area-2 .arrow-right i {
-  right: -2em;
+  right: -1em;
   padding: 1em 2em 1em 1.2em;
 }
 
@@ -213,9 +177,10 @@ section {
 }
 
 .content-area-2 .circles {
-  position: relative;
+  position: absolute;
   left: 50%;
-  top: 98%;
+  top: 40%;
+  margin-top: -2em;
 }
 
 .content-area-2 .circle-1 {
@@ -359,7 +324,7 @@ section {
 
 .content-area-4 .quote {
   font-style: italic;
-  height: 5em
+  height: 7em
 }
 
 .content-area-4 .explanation {

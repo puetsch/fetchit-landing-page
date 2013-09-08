@@ -49,33 +49,65 @@
 
   <section class="viewport" id="area1">
     <div class="content-area-2">
-      <div class="claim">
-        <div class="line"><span id="claim-1">Do you really spend your time</span></div>
-        <div class="line"><span id="claim-2a"> analyzing</span><span id="claim-2b"> data</span></div>
-        <div class="line">
-          <span id="claim-3a">&mdash; or rather </span>
-          <span id="claim-3bc"><span id="claim-3b">chasing</span><span id="claim-3c"> it?</span></span>
-        </div>
+      <div class="claim" id="claim-1">
+        <img src="img/claim1.svg" />
       </div>
-      <div class="arrows">
-        <a class="arrow-left" href="#">
+      <div class="claim" id="claim-2">
+        <img src="img/claim2.svg" />
+      </div>
+      <div class="claim" id="claim-3">
+        <img src="img/claim3.svg" />
+      </div>
+      <div class="arrows"">
+        <a class="arrow-left" id="-1">
           <i class="icon-chevron-left icon-light"></i>
         </a>
-        <a class="arrow-right" href="#">
+        <a class="arrow-right" id="1">
           <i class="icon-chevron-right icon-light"></i>
         </a>
       </div>
       <div class="circles">
-        <a class="circle-1" href="#">
-          <i class="icon-circle icon-dark"></i>
+        <a class="circle-1" id="circle-1">
+          <i class="icon-circle icon-light icon-dark"></i>
         </a>
-        <a class="circle-2" href="#">
+        <a class="circle-2" id="circle-2">
           <i class="icon-circle icon-light"></i>
         </a>
-        <a class="circle-3" href="#">
+        <a class="circle-3" id="circle-3">
           <i class="icon-circle icon-light"></i>
         </a>
       </div>
+      <script>
+        id = 1;
+        function display(id) {
+          $('div.claim').fadeOut('slow');
+          $('.circles i').removeClass('icon-dark');
+          var target = 'div#claim-' + id;
+          $(target).fadeIn('slow');
+          $('.circles #circle-' + id + ' i').addClass('icon-dark');
+        }
+        function rotate(offset) {
+          id = 1 + (id + offset + 2) % 3;
+          display(id);
+        }
+        var myinterval = setInterval ("rotate(1);", 4000);
+        function suspendinterval() {
+          clearInterval(myinterval);
+          setTimeout ('myinterval = setInterval ("rotate(1);", 4000);',10000);
+        };
+        $('.circles a').click(function() {
+          suspendinterval();
+          var id_prop = $(this).prop('id');
+          id = id_prop.substr(id_prop.length-1,1);
+          display(id);
+        });
+        $('.arrows a').click(function() {
+          suspendinterval();
+          offset = parseInt($(this).prop('id')); 
+          rotate(offset);
+        });
+      </script>
+
       <div class="sign-up-form">
         <form action="#">
           <img src="img/banner.png" width="276" height="52" alt="banner" />
@@ -88,6 +120,31 @@
         </form>
       </div>
     </div>
+    
+    <script>
+      var form_fixed = false;
+      function switch_form() {
+        form_fixed = !form_fixed;
+        $('.sign-up-form').hide();
+        switch(form_fixed) {
+          case true:
+            $('.sign-up-form').css({
+              "position": "fixed",
+              "top": "5em",
+              "background": "rgba(255,255,255,1)"
+            });
+            break;
+          case false:
+            $('.sign-up-form').css({
+              "position": "absolute",
+              "top": "5%",
+              "background": "rgba(255,255,255,0.5)"
+            });
+            break;
+        }
+        $('.sign-up-form').slideDown('fast');
+      }
+    </script>
     
 
     <div class="content-area-3">
@@ -160,7 +217,7 @@
             <p>FetchIt encrypts data before storing it either in a secure cloud, or in your company's established infrastructure.</p>
           </div>
         </div>
-        <button class="pure-button tell-me-more-button">Tell me more!</button>
+        <button class="pure-button tell-me-more-button" onClick="switch_form();">Tell me more!</button>
       </div>
     </div>
   </section>
@@ -183,8 +240,8 @@
               $(this).addClass('pure-menu-selected');
               $('div.content').css('display','none');
               $('.content i').css('display','none');
-              $('div#content-' + $(this).prop('id')).css('display','block');;
-              $('#content-' + $(this).prop('id') + ' i').css('display','inline');;
+              $('div#content-' + $(this).prop('id')).css('display','block');
+              $('#content-' + $(this).prop('id') + ' i').css('display','inline');
             });
           </script>
           <div class="content" id="content-status">
@@ -239,14 +296,64 @@
                 <li><i class="icon-arrow-right"></i> FetchIt allows you to reject reports that don't meet your quality criteria
                   with a single click.</li>
               </ul>
-              <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+              <button class="pure-button tell-me-more-button button-light" onClick="switch_form();">Tell me more!</button>
           </div>
           
           <div class="content" id="content-kpi">
             <p>There isn't a modern company that's not steered by KPIs. Identifying and addressing
               all the right sources for a comprehensive management dashboard with a large number of KPIs
               is an error-prone process.</p>
-            <img src="img/kpi.png" class="example" alt="KPI dashboard" /> 
+            <table class="pure-table">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>KPI</th>
+                  <th>As is</th>
+                  <th>To be</th>
+                  <th>Status</th>
+                  <th>Comment</th>
+                  <th>...</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Project A</td>
+                  <td>Sales</td>
+                  <td>12</td>
+                  <td>5</td>
+                  <td>Red</td>
+                  <td>Extra holiday</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Project B</td>
+                  <td>Volume</td>
+                  <td>20</td>
+                  <td>19</td>
+                  <td>Yellow</td>
+                  <td></td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Project C</td>
+                  <td>Discount</td>
+                  <td>8</td>
+                  <td>11</td>
+                  <td>Green</td>
+                  <td></td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              <tbody>
+            </table>
             <p>Ensure a high-quality deliverable by a consistent end-to-end data gathering process with FetchIt.</p>
             <ul>
               <li><i class="icon-arrow-right"></i> In FetchIt, you define the dashboard structure and data providers once.</li>
@@ -258,14 +365,50 @@
                 can send reminders easilty.</li>
               <li><i class="icon-arrow-right"></i> FetchIt allows you to export the collected data at any time for data analysis.</li>
             </ul>
-            <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+            <button class="pure-button tell-me-more-button button-light" onClick="switch_form();">Tell me more!</button>
           </div>
 
           <div class="content" id="content-nda">
             <p>Special projects require special attention &mdash; and often a separate NDA.
               You need to make sure that you know who signed it and when. You don't have time
               for a solution that requires IT administration for every new user.</p>
-            <img src="img/nda.png" class="example" alt="NDA tracking" /> 
+            <table class="pure-table">
+              <thead>
+                <tr>
+                  <th>Person</th>
+                  <th>NDA</th>
+                  <th>Date</th>
+                  <th>...</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mr A</td>
+                  <td>Rejected</td>
+                  <td>Nov 22</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Mrs B</td>
+                  <td>Read</td>
+                  <td>Sep 17</td>
+                  <td>...</td>
+                </tr>
+                <tr>
+                  <td>Ms C</td>
+                  <td>Accepted</td>
+                  <td>Jan 21</td>
+                  <td>...</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                  <td>...</td>
+                </tr>
+              <tbody>
+            </table>
             <p>Ensure compliance and traceability of the NDA process using FetchIt.</p>
             <ul>
               <li><i class="icon-arrow-right"></i> In FetchIt, you insert the NDA.</li>
@@ -275,7 +418,7 @@
               <li><i class="icon-arrow-right"></i> You see at any time who signed the NDA and when.</li>
               <li><i class="icon-arrow-right"></i> FetchIt allows you to create a compliance report easily with a single click.</li>
             </ul>
-            <button class="pure-button tell-me-more-button button-light">Tell me more!</button>
+            <button class="pure-button tell-me-more-button button-light" onClick="switch_form();">Tell me more!</button>
           </div>
           
         </div>
@@ -362,7 +505,7 @@
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i>
-                <div><button class="pure-button tell-me-more-button button-table">Tell me more!</button></div>
+                <div><button class="pure-button tell-me-more-button button-table" onClick="switch_form();">Tell me more!</button></div>
               </td>
               <td class="current"><input type="checkbox" /></td>
             </tr>
