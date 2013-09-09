@@ -4,19 +4,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024">
 
-  <title>FetchIt -- Effective data retrieval and communication.</title>
-  <meta name="description" content="">
+  <title>go fetch it &mdash; Effective data retrieval and communication.</title>
+  <meta name="description" content="Do you spend your time analyzing data? &mdash; or rather chasing it? Use 'go fetch it': Effective data retrieval and communication">
 
-  <!-- Pure -->
   <link rel="stylesheet" href="css/pure-0.2.1.min.css">
-  
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <link rel="stylesheet" type="text/css" href="css/main.css" />
   
   <script src="js/jquery-1.10.2.min.js"></script>
 
-            <!-- Google Analytics
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,7 +22,7 @@
 
     ga('create', 'UA-42658075-1', 'go-fetchit.com');
     ga('send', 'pageview');
-  </script> -->
+  </script>
 </head>
 
 <body>
@@ -159,66 +156,78 @@
   <section class="viewport"  id="area4">
     <!-- <img src="img/logo_dog_bw.svg" class="background-logo" width="300" height="auto" alt="GoFetchIt" /> -->
     <div class="content-area-4">
-      <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="icon">
-            <span class="icon-stack icon-4x">
-              <i class="icon-circle icon-stack-base icon-light"></i>
-              <i class="icon-wrench icon-dark"></i>
-            </span>
-          </div>
-          <div class="claim">
-            <h2>Flexible like spreadsheets.</h2>
-          </div>
-          <div class="quote">
-            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
-              Strategic decisions rely on quick data collection. I don't have time to wait for IT to build a new report.
-            </p>
-          </div>
-          <div class="explanation">
-            <p>In FetchIt, you define the data you need with a few mouse clicks. No installation needed for any user, just go!</p>
-          </div>
-       </div>
-        <div class="pure-u-1-3 middle-column">
-          <div class="icon">
-            <span class="icon-stack icon-4x">
-              <i class="icon-circle icon-stack-base icon-light"></i>
-              <i class="icon-comments icon-dark"></i>
-            </span>
-          </div>
-          <div class="claim">
-            <h2>Communicative as email.</h2>
-          </div>
-          <div class="quote">
-            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
-              I spend half of my time running after people before starting to analyze it. Communication is poor.
-            </p>
-          </div>
-          <div class="explanation">
-            <p>FetchIt sends out requests and reminders, and makes sure the recipient understands. You know at any time what's going on.</p>
-          </div>
-        </div>
-        <div class="pure-u-1-3">
-          <div class="icon">
-            <span class="icon-stack icon-4x">
-              <i class="icon-circle icon-stack-base icon-light"></i>
-              <i class="icon-lock icon-dark"></i>
-            </span>
-          </div>
-          <div class="claim">
-            <h2>Secure as ERP.</h2>
-          </div>
-          <div class="quote">
-            <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
-              Data for critical business decisions is stored in spreadsheets/ email. I'm afraid of a data audit or leak, but without some shortcuts we wouldn't get things done.
-            </p>
-          </div>
-          <div class="explanation">
-            <p>FetchIt encrypts data before storing it either in a secure cloud, or in your company's established infrastructure.</p>
-          </div>
-        </div>
-        <button class="pure-button tell-me-more-button" onClick="switch_form();">Tell me more!</button>
-      </div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <div class="icon">
+                <span class="icon-stack icon-4x">
+                  <i class="icon-circle icon-stack-base icon-light"></i>
+                  <i class="icon-wrench icon-dark"></i>
+                </span>
+              </div>    
+            </th>
+            <th>
+              <div class="icon">
+                <span class="icon-stack icon-4x">
+                  <i class="icon-circle icon-stack-base icon-light"></i>
+                  <i class="icon-comments icon-dark"></i>
+                </span>
+              </div>
+            </th>
+            <th>
+              <div class="icon">
+                <span class="icon-stack icon-4x">
+                  <i class="icon-circle icon-stack-base icon-light"></i>
+                  <i class="icon-lock icon-dark"></i>
+                </span>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <h2>Flexible like spreadsheets.</h2>
+            </th>
+            <th class="middle-column">
+              <h2>Communicative as email.</h2>
+            </th>
+            <th>
+              <h2>Secure as ERP.</h2>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="quote">
+              <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+                Strategic decisions rely on quick data collection. I don't have time to wait for IT to build a new report.
+              </p>
+            </td>
+            <td class="quote middle-column">
+              <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+                I spend half of my time running after people before starting to analyze it. Communication is poor.
+              </p>
+            </td>
+            <td class="quote">
+              <p><i class="icon-quote-left icon-large pull-left icon-muted"></i>
+                Data for critical business decisions is stored in spreadsheets/ email. I'm afraid of a data audit or leak, but without some shortcuts we wouldn't get things done.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>In FetchIt, you define the data you need with a few mouse clicks. No installation needed for any user, just go!</p>
+            </td>
+            <td class="middle-column">
+              <p>FetchIt sends out requests and reminders, and makes sure the recipient understands. You know at any time what's going on.</p>
+            </td>
+            <td>
+              <p>FetchIt encrypts data before storing it either in a secure cloud, or in your company's established infrastructure.</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -420,7 +429,6 @@
             </ul>
             <button class="pure-button tell-me-more-button button-light" onClick="switch_form();">Tell me more!</button>
           </div>
-          
         </div>
       </div>
     </div>
@@ -446,60 +454,60 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>Easy and flexible to use</td>
+              <td class="benefit">Easy and flexible to use</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others">-</td>
               <td class="others">-</td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Easy user administration</td>
+              <td class="benefit">Easy user administration</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others">-</td>
               <td class="others">-</td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Audit trail</td>
+              <td class="benefit">Audit trail</td>
               <td class="others">-</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
               <td>4</td>
-              <td>Reminders and communication</td>
+              <td class="benefit">Reminders and communication</td>
               <td class="others">-</td>
               <td class="others">-</td>
               <td class="others">-</td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
               <td>5</td>
-              <td>Excel integration</td>
+              <td class="benefit">Excel integration</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others">-</td>
               <td class="others">-</td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
-              <td>6</td>
+              <td class="benefit">6</td>
               <td>Multi-dimensional data</td>
               <td class="others">-</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
               <td class="others">-</td>
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i></td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
             <tr>
-              <td>7</td>
+              <td class="benefit">7</td>
               <td>Encryption and data security</td>
               <td class="others">-</td>
               <td class="others"><i class="icon-check icon-large icon-light"></i></td>
@@ -507,10 +515,16 @@
               <td class="fetchit"><i class="icon-check icon-large icon-dark"></i>
                 <div><button class="pure-button tell-me-more-button button-table" onClick="switch_form();">Tell me more!</button></div>
               </td>
-              <td class="current"><input type="checkbox" /></td>
+              <td class="current"><a class="checkbox"><i class="icon-check-empty icon-large icon-light"></i></a></td>
             </tr>
           </tbody>
         </table>  
+        <script>
+          $('.checkbox i').click(function() {
+            $(this).toggleClass('icon-check-empty');
+            $(this).toggleClass('icon-check');
+          });
+        </script>          
       </div>
     </div>
   </section>
